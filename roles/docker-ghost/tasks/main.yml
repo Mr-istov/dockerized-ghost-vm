@@ -1,0 +1,12 @@
+---
+- name: Install the prerequsite modules required by docker_compose
+  pip:
+    name:
+      - docker
+      - docker-compose
+    state: present
+    executable: pip3
+
+- name: Pull,build and start services using docker compose
+  docker_compose:
+    project_src: /vagrant_data/docker/ghost
