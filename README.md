@@ -27,6 +27,10 @@ vagrant up
 This might take a while since it will be downloading the debian box, then it will install all of the required tools
 and docker images to run ghost inside docker in the VM.
 
+After all of the provisioning finishes, you can open the Ghost platform on your host browser:
+https://localhost:8080
+And for the admin panel: https://localhost:8080/ghost
+
 ## Project layout
 
 The project uses vagrant to spin up a debian 10 VM and then uses the `shell` and `ansible_local` vagrant provisioners.
